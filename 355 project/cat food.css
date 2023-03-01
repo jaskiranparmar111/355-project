@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Muli', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  height: 20vh;
+}
+
+.Info{
+  border-radius: 25px;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  background-color: lightgrey;
+}
+
+.Info p{
+  color: black;
+}
+
+
+
+.container{
+  background-color:#C6F8E5; 
+  border-radius: 25px;
+  transform-origin: top-left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 200vh;
+  padding: 50px;
+}
+
+.Sign-In{
+  position:fixed;
+  right: 100px;
+  background-color: lightgrey;
+  border-radius: 25px;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.Sign-Up{
+  position: fixed;
+  right: 160px;
+  background-color: lightgray;
+  border-radius: 25px;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+.container.show-nav{
+  transform: rotate(-40deg);
+}
+
+
+.circle-container{
+  position: fixed;
+  top: -100px;
+  left: -100px;  
+}
+
+.circle {
+  background-color: lightgrey;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+
+.container.show-nav .circle{
+  transform: rotate(-70deg);
+}
+
+.circle button{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: white;
+}
+
+
+.circle button#open{
+  left: 60%;
+}
+
+
+
+.container.show-nav + nav li{
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+nav{
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul{
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+nav ul li{
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  color: white;
+  margin: 10px 0;
+  background-color: lightgray;
+  transform: translateX(-500%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i{
+  font-size: 0px;
+  margin-right: 0px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-200%);
+}
+
+nav ul li + li + li{
+  margin-left: 30px;
+  transform: translateX(-400%);
+}
+
+nav ul li + li + li + li{
+  margin-left: 45px;
+}
+
+nav ul li + li + li + li + li{
+  margin-left: 60px;
+}
+
+nav ul li + li + li + li + li + li{
+  margin-left: 75px;
+}
+
+
